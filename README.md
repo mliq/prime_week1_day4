@@ -29,7 +29,7 @@ In this assignment you will create your own Git repository, and learn about Obje
 
 ## Extra joseph needs to ask scott about:
 
-- Add a prototypical function called `Attack`. When called, return `Math.floor(Math.random() * 20) + 1` added to the Player/Monster's strength value. For the player objects override the function to return the same number, but use dexterity value instead of strength.
-- Bonus??? Add a hyperlink to the player/monster's name that returns Monster.Attack() or Player.Attack() based on the name clicked (use the array and the objects in the array, not just the same logic applied to the numbers in the table).
+- Add a prototypical function to the Monster class called `Attack`. When called, return `Math.floor(Math.random() * 20) + 1` added to the object's strength value. For the player class override the function to return the same thing, but use dexterity value instead of strength.
+- Bonus??? Add a hyperlink to the player/monster's name that prints Monster.Attack() or Player.Attack() in the console, based on the name clicked. Use the array and the objects in the array, not just the same logic applied to the numbers in the table.
   
 ####Be sure to commit your changes to your development branch frequently!

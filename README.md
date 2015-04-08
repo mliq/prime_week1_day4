@@ -6,13 +6,12 @@ In this assignment you will create your own Git repository, and learn about Obje
 **Instructions:**
 
   - Create a brand new repository under your GitHub account. Give it a descriptive name such as "Week1-Day4", and a description such as "Week 1 day 4 - Function Prototyping".
-  - 
   - Create a new HTML file named `index.html`.
   - Inside of the HTML file, create a simple HTML document. Add the following to the document:
     - A title, description and author metadata.
     - A label with `Name:` as the text.
     - A textbox that has an id of `name`. 
-    - Create six more label/textboxes for Strength, Dexterity, Constitution, Wisdom, Intelligence and Charisma. Be sure to give the text boxes unique IDs as well.
+    - Create six more label/textboxes for the six monster/player statistics: Strength, Dexterity, Constitution, Wisdom, Intelligence and Charisma. Be sure to give the text boxes unique IDs as well.
     - A third label with `Player Class (Optional)`.
     - A textbox with the id `class`.
     - A button with the text `Add Player/Monster to Records`.

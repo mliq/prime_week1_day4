@@ -29,7 +29,8 @@ In this assignment you will create your own Git repository, and learn about Obje
 
 ## Bonus:
 
-- Add a prototypical function to the Monster class called `Attack`. When called, return `Math.floor(Math.random() * 20) + 1` added to the object's strength value. For the player class override the function to return the same thing, but use dexterity value instead of strength.
+- Add a prototypical function to the Monster class called `Attack`. When called, it will roll a 20 sided die and add that to the object's strength value. Hint: return `Math.floor(Math.random() * 20) + 1` added to the object's strength value. 
+    -For the player class override the function using prototypes to return the same thing, but use dexterity value instead of strength.
 - Add a hyperlink to the player/monster's name that prints Monster.Attack() or Player.Attack() in the console, based on the name clicked. Use the array and the objects in the array, not just the same logic applied to the numbers in the table.
 - Instead of using a textbox for Player Class, try creating a radio button (HTML input of type `radio`) that has the values `None`, `Cleric`, `Fighter`, `Rogue`, and `Wizard`. 
 - Change the application to use your favorite RPG's system, classes, add in other stats like race, hit point, or what ever!

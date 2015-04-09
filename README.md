@@ -9,8 +9,8 @@ In this assignment you will create your own Git repository, and learn about Obje
 - Create a new HTML file named `index.html`.
 - Inside of the HTML file, create a simple HTML document. Add the following to the document:
     * A title, description and author metadata.
-    * A label with `Name:` as the text.
-    * A textbox that has an id of `name`. 
+    * An HTML label with `Name:` as the text.
+    * A textbox (an HTML input of type `text`) that has an id of `name`. 
     * Create six more label/textboxes for the six monster/player statistics: Strength, Dexterity, Constitution, Wisdom, Intelligence and Charisma. Be sure to give the text boxes unique IDs as well.
     * A third label with `Player Class (Optional)`.
     * A textbox with the id `class`.
@@ -27,9 +27,11 @@ In this assignment you will create your own Git repository, and learn about Obje
     * Create an empty array to serve as storage.
     * Next, write an function that will act as a click handler for the button. It should call the appropriate constructor, pass in the values the user typed in, add the object to the array, and append it to the table for visual representation. Hint: Use `document.getElementById('addMonster').addEventListener('click', functionNameGoesHere);`
 
-## Extra joseph needs to ask scott about:
+## Bonus:
 
 - Add a prototypical function to the Monster class called `Attack`. When called, return `Math.floor(Math.random() * 20) + 1` added to the object's strength value. For the player class override the function to return the same thing, but use dexterity value instead of strength.
-- Bonus??? Add a hyperlink to the player/monster's name that prints Monster.Attack() or Player.Attack() in the console, based on the name clicked. Use the array and the objects in the array, not just the same logic applied to the numbers in the table.
+- Add a hyperlink to the player/monster's name that prints Monster.Attack() or Player.Attack() in the console, based on the name clicked. Use the array and the objects in the array, not just the same logic applied to the numbers in the table.
+- Instead of using a textbox for Player Class, try creating a radio button (HTML input of type `radio`) that has the values `None`, `Cleric`, `Fighter`, `Rogue`, and `Wizard`. 
+- Change the application to use your favorite RPG's system, classes, add in other stats like race, hit point, or what ever!
   
 ####Be sure to commit your changes to your development branch frequently!

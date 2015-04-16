@@ -28,7 +28,7 @@ In this assignment you will create your own Git repository, and learn about Obje
     * Next, write an function that will act as a click handler for the button. It should call the appropriate constructor using the values the user typed into the textboxes, add the object to the array, append it to the table for visual representation, and clear out the textboxes. Hint: Use `document.getElementById('addMonster').addEventListener('click', <functionNameGoesHere>);`
 - Add a prototypical function to the Monster class called `Attack`. When called, it will roll a 20 sided die and add that to the object's strength value. Hint: return `Math.floor(Math.random() * 20) + 1` added to the object's strength value. 
     -For the player class override the function using prototypes to return the same thing, but use dexterity value instead of strength.
-- Add a hyperlink to the player/monster's name that prints Monster.Attack() or Player.Attack() in the console, based on the name clicked. Use the array and the objects in the array, not just the same logic applied to the numbers in the table.
+- Make the player/monster's name a hyperlink or button, and when it is clicked it should output the value of `Monster.Attack()` or `Player.Attack()` to an alert or to the DOM. Use the array and the objects in the array, looking them up from the array using the name.
  
 ## Bonus:
 

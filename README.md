@@ -25,13 +25,13 @@ In this assignment you will create your own Git repository, and learn about Obje
     * Create an object called `Player` that inherits from `Monster`, and has the additional property `playerClass`.
     * Create a constructor for `Player` as well as a prototype to correctly pass reference to `this`.
     * Create an empty array to serve as storage.
-    * Next, write an function that will act as a click handler for the button. It should call the appropriate constructor, pass in the values the user typed in, add the object to the array, and append it to the table for visual representation. Hint: Use `document.getElementById('addMonster').addEventListener('click', functionNameGoesHere);`
-
-## Bonus:
-
+    * Next, write an function that will act as a click handler for the button. It should call the appropriate constructor using the values the user typed into the textboxes, add the object to the array, append it to the table for visual representation, and clear out the textboxes. Hint: Use `document.getElementById('addMonster').addEventListener('click', <functionNameGoesHere>);`
 - Add a prototypical function to the Monster class called `Attack`. When called, it will roll a 20 sided die and add that to the object's strength value. Hint: return `Math.floor(Math.random() * 20) + 1` added to the object's strength value. 
     -For the player class override the function using prototypes to return the same thing, but use dexterity value instead of strength.
 - Add a hyperlink to the player/monster's name that prints Monster.Attack() or Player.Attack() in the console, based on the name clicked. Use the array and the objects in the array, not just the same logic applied to the numbers in the table.
+ 
+## Bonus:
+
 - Instead of using a textbox for Player Class, try creating a radio button (HTML input of type `radio`) that has the values `None`, `Cleric`, `Fighter`, `Rogue`, and `Wizard`. 
 - Change the application to use your favorite RPG's system, classes, add in other stats like race, hit point, or what ever!
   

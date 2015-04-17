@@ -1,0 +1,15 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #eee;
+}
+
+main {
+    width: 660px;
+    padding: 10px 20px; /* adds 10px padding on top/bottom and 20px on right/left */
+    margin: 0 auto; /* center the div on the screen */
+    background-color: #fff;
+}
+
+header, footer {
+    text-align: center; /* center the text */
+}

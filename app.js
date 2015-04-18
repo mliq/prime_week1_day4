@@ -1,0 +1,19 @@
+var Monster = {name, strength, dexterity, constitution, wisdom, intelligence, charisma};
+var Player = {name, strength, dexterity, constitution, wisdom, intelligence, charisma, playerClass};
+
+function Player () {
+	this.name = name;
+	this.strength = strength;
+	this.dexterity = dexterity;
+	this.constitution = constitution;
+	this.wisdom = wisdom;
+	this.intelligence = intelligence;
+	this.charisma = charisma;
+	this.playerClass = playerClass;
+}
+var monsterArray = [];
+
+function clickHandler (player) {
+	monsterArray.push(player);
+	document.getElementById("addMonster").addEventListerner("click", clickHandler);
+}

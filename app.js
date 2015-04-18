@@ -1,7 +1,7 @@
 var Monster = {name, strength, dexterity, constitution, wisdom, intelligence, charisma};
 var Player = {name, strength, dexterity, constitution, wisdom, intelligence, charisma, playerClass};
 
-function Player () {
+function Player (name, strength, dexterity, constitution, wisdom, intelligence, charisma, playerClass) {
 	this.name = name;
 	this.strength = strength;
 	this.dexterity = dexterity;

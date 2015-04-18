@@ -45,7 +45,15 @@ Monster.prototype.addToTable = function() {
     // Loop through the array, creating a new table cell element and adding the text of each item in the array to it in order
     for (i=0; i<statsArray.length; i++) {
         var newCell = newRow.insertCell(i);
-        newCell.innerHTML = statsArray[i];
+		if(i==0){
+			//var button = document.createElement("button");
+			//button = statsArray[i];
+			//newCell.appendChild(button);
+
+			newCell.innerHTML = "<button onclick=\"playerArray[" + (playerArray.length - 1) + "].attack()\">"+statsArray[i]+"</button>";
+		} else{
+			newCell.innerHTML = statsArray[i];
+		}
     }
 };
 
@@ -53,8 +61,9 @@ Monster.prototype.addToTable = function() {
 Player.prototype.attack = function() {
     // Roll a 20-sided die
     var diceRoll = Math.floor(Math.random() * 20) + 1;
+	var attackValue = diceRoll + parseInt(this.dexterity);
     // Add the player's dexterity bonus and return it
-    return diceRoll + this.dexterity;
+    alert(this.name + " attacks for " + attackValue + ".");
 };
 
 // Called when we press the submit button

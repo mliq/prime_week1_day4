@@ -1,3 +1,9 @@
+// Global Variables
+
+var playerArray = [];
+var monsterTable = document.getElementById("monsters");
+var i = 0;
+
 // Monster Constructor
 function Monster(name, strength, dexterity, constitution, wisdom, intelligence, charisma) {
 	this.name = name;
@@ -9,9 +15,6 @@ function Monster(name, strength, dexterity, constitution, wisdom, intelligence, 
 	this.charisma = charisma;
 }
 
-// Follow this link for more information
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#Inheritance
-
 // Player Constructor
 function Player(name, strength, dexterity, constitution, wisdom, intelligence, charisma, playerClass) {
     // Call Monster() and pass in the stats
@@ -20,33 +23,42 @@ function Player(name, strength, dexterity, constitution, wisdom, intelligence, c
     this.playerClass = playerClass;
 }
 
+// Make the Player(name...) constructor also create a monster object? This is the inheritance part
+Player.prototype = Object.create(Monster.prototype);
+// Set the player's constructor to specifically be Player(name...)
+Player.prototype.constructor = Player;
+
+// Monster attack() function rolls a 20-sided die and adds the strength
 Monster.prototype.attack = function() {
     // Roll a 20-sided die
     var diceRoll = Math.floor(Math.random() * 20) + 1;
     // Add the monster's strength bonus and return it
     return diceRoll + this.strength;
-}
+};
 
-// Make the Player(name...) constructor also create a monster object? This is the inheritance part
-Player.prototype = Object.create(Monster.prototype);
-// Set the player's constructor to specifically be Player(name...)
-Player.prototype.constructor = Player;
+// Adds the monster to the table view
+Monster.prototype.addToTable = function() {
+    // Temporarily pack monster attributes in an array so that we can loop through them instead of assigning them one at a time
+    var statsArray = [this.name, this.strength, this.dexterity, this.constitution, this.wisdom, this.intelligence, this.charisma];
+    // Create a new row at the bottom of the table
+    var newRow = monsterTable.insertRow(-1);
+    // Loop through the array, creating a new table cell element and adding the text of each item in the array to it in order
+    for (i=0; i<statsArray.length; i++) {
+        var newCell = newRow.insertCell(i);
+        newCell.innerHTML = statsArray[i];
+    }
+};
+
+// Override the Monster's attack() function
 Player.prototype.attack = function() {
     // Roll a 20-sided die
     var diceRoll = Math.floor(Math.random() * 20) + 1;
     // Add the player's dexterity bonus and return it
     return diceRoll + this.dexterity;
-}
+};
 
-var playerArray = [];
-
-function clickHandler (player) {
-	makePlayer();
-	//monsterArray.push(player);
-	//document.getElementById("addMonster").addEventListener("click", clickHandler);
-}
-
-function makePlayer(){
+// Called when we press the submit button
+function addMonster(){
 	var name = document.getElementById("name").value;
 	var strength = document.getElementById("strength").value;
 	var dexterity = document.getElementById("dexterity").value;
@@ -57,5 +69,5 @@ function makePlayer(){
 	var playerClass = document.getElementById("class").value;
 	var newPlayer = new Player (name, strength, dexterity, constitution, wisdom, intelligence, charisma, playerClass);
 	playerArray.push(newPlayer);
+    newPlayer.addToTable();
 }
-

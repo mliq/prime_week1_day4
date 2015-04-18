@@ -44,12 +44,13 @@ Monster.prototype.addToTable = function() {
     var newRow = monsterTable.insertRow(-1);
     // Loop through the array, creating a new table cell element and adding the text of each item in the array to it in order
     for (i=0; i<statsArray.length; i++) {
+        // Create a new empty cell at index i
         var newCell = newRow.insertCell(i);
+        // The first index should be a button with the monster/player's name which calls the attack() function
 		if(i==0){
-			//var button = document.createElement("button");
-			//button = statsArray[i];
-			//newCell.appendChild(button);
-
+            // <cell>
+            // <button onclick="playerArray[i].attack()">Name</button>
+            // </cell>
 			newCell.innerHTML = "<button onclick=\"playerArray[" + (playerArray.length - 1) + "].attack()\">"+statsArray[i]+"</button>";
 		} else{
 			newCell.innerHTML = statsArray[i];

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Week 1 day 4 - Function Prototyping
 ##Assignment Overview
 
@@ -36,3 +37,19 @@ In this assignment you will create your own Git repository, and learn about Obje
 - Change the application to use your favorite RPG's system, classes, add in other stats like race, hit point, or what ever!
   
 ####Be sure to commit your changes to your development branch frequently!
+=======
+# Week 1 Weekend Challenge - Function Prototyping
+Group members: Clare, Michael, Michelle, Rom
+
+### A short explanation of RPG terminology from a gamer (Rom)
+
+In an RPG, short for role-playing game, you play a **class** like a cleric, who heals injured people, or a fighter, who beats up monsters. The class represents your abilities and role in the game. Our weekend assignment is basically to build a miniature RPG, which I think is pretty cool, but it might not be everyone's cup of tea.
+
+Other RPG terms that show up in the text:
+
+- Strength, Dexterity, Constitution, Wisdom, Intelligence, and Charisma are player **statistics**. They represent aspects of the player's character, such as how physically strong they are (strength), how much damage they can take before becoming unconscious (constitution), and how likeable they are (charisma).
+- Races, as mentioned in the bonus question, are fantasy creatures like **elves** and **dwarves**. And humans, in the context of these systems.
+- Hit points (HP) are a numeric representation of how much health your character has. Typically, when your HP reaches 0, you die or fall unconscious.
+
+We don't have to include all these things, but I thought I'd write an explanation so everyone is clear on what they mean, so we're all on the same page.
+>>>>>>> 886650bdc3008d394073d16cc9df8835ac5133d6

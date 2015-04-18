@@ -1,11 +1,16 @@
-label {
-	display: block;
-	margin: 0 0 10px 0;
 
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #eee;
 }
-button {
-	margin-bottom: 20px;
+
+main {
+    width: 660px;
+    padding: 10px 20px; /* adds 10px padding on top/bottom and 20px on right/left */
+    margin: 0 auto; /* center the div on the screen */
+    background-color: #fff;
 }
-table, th, td {
-	border: 1px solid black;
+
+header, footer {
+    text-align: center; /* center the text */
 }

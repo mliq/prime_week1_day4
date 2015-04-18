@@ -32,8 +32,9 @@ Player.prototype.constructor = Player;
 Monster.prototype.attack = function() {
     // Roll a 20-sided die
     var diceRoll = Math.floor(Math.random() * 20) + 1;
+    var attackValue = diceRoll + parseInt(this.strength);
     // Add the monster's strength bonus and return it
-    return diceRoll + this.strength;
+    alert(this.name + " attacks for " + attackValue + ".");
 };
 
 // Adds the monster to the table view
@@ -82,11 +83,17 @@ function addMonster(){
 	var intelligence = document.getElementById("intelligence").value;
 	var charisma = document.getElementById("charisma").value;
 	var playerClass = document.getElementById("class").value;
-	if(playerClass != ""){
-		var newObject = new Player (name, strength, dexterity, constitution, wisdom, intelligence, charisma, playerClass);
-	} else{
-		var newObject = new Monster(name, strength, dexterity, constitution, wisdom, intelligence, charisma);
-	}
-	playerArray.push(newObject);
-    newObject.addToTable();
+    // Validate data: Make sure that everything (except playerClass) has a value
+    if(name == "" || strength == "" || dexterity == "" || constitution == "" || wisdom == "" || intelligence == "" || charisma == "" ) {
+        alert("Please enter a name and statistics to make a monster!");
+    }
+    else {
+        if (playerClass != "") {
+            var newObject = new Player(name, strength, dexterity, constitution, wisdom, intelligence, charisma, playerClass);
+        } else {
+            var newObject = new Monster(name, strength, dexterity, constitution, wisdom, intelligence, charisma);
+        }
+        playerArray.push(newObject);
+        newObject.addToTable();
+    }
 }

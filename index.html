@@ -20,8 +20,6 @@
 
     <main>
         <!-- TODO: Assignment work -->
-        <p>This is placeholder text</p>
-        <p>So is this</p>
     <!--  Examples of text and button HTML elements we will find useful: 
         <form action="demo_form.asp" method="get" id="form1">
         First name: <input type="text" name="fname"><br>
@@ -45,7 +43,11 @@
 		<label>Wisdom <input type="text" id="wisdom"/></label></br>
 		<label>Intelligence <input type="text" id="intelligence"/></label></br>
 		<label>Charisma <input type="text" id="charisma"/></label></br>
-		<label>Player Class <input type="text" id="class"/></label></br>
+		<form>
+			<input type="radio" id="class">Cleric
+			<br>
+			<input type="radio" id="class"/>None
+		</form>
 		
 		<button type="button" id="addMonster" onclick="addMonster()">Add Player/Monster to Records</button>
 		

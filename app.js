@@ -82,7 +82,19 @@ function addMonster(){
 	var wisdom = document.getElementById("wisdom").value;
 	var intelligence = document.getElementById("intelligence").value;
 	var charisma = document.getElementById("charisma").value;
-	var playerClass = document.getElementById("class").value;
+	var classRadios = document.getElementsByName('plyrClassOpt');
+	var classRadiosLength = classRadios.length;
+	console.log("Hello??????");
+	for (var b = 0; b < classRadiosLength; b++) {
+	    if (classRadios[b].checked) {
+	    	console.log(classRadios[b].value);
+	        var playerClass = classRadios[b].value;
+	        break;
+	    } else {
+	    	console.log("the problem is the if loop");
+	    }
+	}
+	
     // Validate data: Make sure that everything (except playerClass) has a value
     if(name == "" || strength == "" || dexterity == "" || constitution == "" || wisdom == "" || intelligence == "" || charisma == "" ) {
         alert("Please enter a name and statistics to make a monster!");

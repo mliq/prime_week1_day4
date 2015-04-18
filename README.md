@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Week 1 day 4 - Function Prototyping
 ##Assignment Overview
 
@@ -52,4 +51,3 @@ Other RPG terms that show up in the text:
 - Hit points (HP) are a numeric representation of how much health your character has. Typically, when your HP reaches 0, you die or fall unconscious.
 
 We don't have to include all these things, but I thought I'd write an explanation so everyone is clear on what they mean, so we're all on the same page.
->>>>>>> 886650bdc3008d394073d16cc9df8835ac5133d6

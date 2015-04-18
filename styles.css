@@ -14,10 +14,22 @@ main {
 header, footer {
     text-align: center; /* center the text */
 }
+
 label {
 	display: inline-block;
 	padding: 20px 0 0 0;
+    width: 100px;
 }
+
 button {
 	margin: 20px 0 10px 0;
+}
+
+form {
+    overflow: auto; /* Prevent floating elements (column divs) from taking up no space */
+}
+
+.column {
+    width: 50%;
+    float: left;
 }

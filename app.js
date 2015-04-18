@@ -25,7 +25,6 @@ Player.prototype = Object.create(Monster.prototype);
 // Set the player's constructor to specifically be Player(name...)
 Player.prototype.constructor = Player;
 
-var monsterArray = [];
 var playerArray = [];
 
 function clickHandler (player) {
@@ -46,5 +45,4 @@ function makePlayer(){
 	var newPlayer = new Player (name, strength, dexterity, constitution, wisdom, intelligence, charisma, playerClass);
 	playerArray.push(newPlayer);
 }
-console.log(playerArray);
 

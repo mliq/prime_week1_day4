@@ -20,6 +20,13 @@ function Player(name, strength, dexterity, constitution, wisdom, intelligence, c
     this.playerClass = playerClass;
 }
 
+Monster.prototype.Attack = function() {
+    // Roll a 20-sided die
+    var diceRoll = Math.floor(Math.random() * 20) + 1;
+    // Add the monster's strength bonus and return it
+    return diceRoll + this.strength;
+}
+
 // Make the Player(name...) constructor also create a monster object? This is the inheritance part
 Player.prototype = Object.create(Monster.prototype);
 // Set the player's constructor to specifically be Player(name...)

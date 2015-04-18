@@ -20,7 +20,7 @@ function Player(name, strength, dexterity, constitution, wisdom, intelligence, c
     this.playerClass = playerClass;
 }
 
-Monster.prototype.Attack = function() {
+Monster.prototype.attack = function() {
     // Roll a 20-sided die
     var diceRoll = Math.floor(Math.random() * 20) + 1;
     // Add the monster's strength bonus and return it
@@ -31,6 +31,12 @@ Monster.prototype.Attack = function() {
 Player.prototype = Object.create(Monster.prototype);
 // Set the player's constructor to specifically be Player(name...)
 Player.prototype.constructor = Player;
+Player.prototype.attack = function() {
+    // Roll a 20-sided die
+    var diceRoll = Math.floor(Math.random() * 20) + 1;
+    // Add the player's dexterity bonus and return it
+    return diceRoll + this.dexterity;
+}
 
 var playerArray = [];
 

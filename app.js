@@ -42,7 +42,7 @@ function makePlayer(){
 	var wisdom = document.getElementById("wisdom").value;
 	var intelligence = document.getElementById("intelligence").value;
 	var charisma = document.getElementById("charisma").value;
-	var playerClass = document.getElementById("playerClass").value;
+	var playerClass = document.getElementById("class").value;
 	var newPlayer = new Player (name, strength, dexterity, constitution, wisdom, intelligence, charisma, playerClass);
 	playerArray.push(newPlayer);
 }

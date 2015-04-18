@@ -14,3 +14,10 @@ main {
 header, footer {
     text-align: center; /* center the text */
 }
+label {
+	display: inline-block;
+	padding: 20px 0 0 0;
+}
+button {
+	margin: 20px 0 10px 0;
+}

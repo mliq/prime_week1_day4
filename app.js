@@ -32,6 +32,12 @@ console.log(player1 instanceof Monster);
 var monsterArray = [];
 
 function clickHandler (player) {
-	monsterArray.push(player);
-	document.getElementById("addMonster").addEventListerner("click", clickHandler);
+	makePlayer();
+	//monsterArray.push(player);
+	//document.getElementById("addMonster").addEventListener("click", clickHandler);
+}
+
+function makePlayer(){
+	var name = document.getElementById("name").value;
+	console.log(name);
 }

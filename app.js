@@ -25,6 +25,10 @@ Player.prototype = Object.create(Monster.prototype);
 // Set the player's constructor to specifically be Player(name...)
 Player.prototype.constructor = Player;
 
+var player1 = new Player ("Rom", 5, 6, "nice", "excellent", "excellent", 10, "warrior");
+console.log(player1);
+console.log(player1 instanceof Monster);
+//this works 
 var monsterArray = [];
 
 function clickHandler (player) {

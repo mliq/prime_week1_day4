@@ -82,7 +82,11 @@ function addMonster(){
 	var intelligence = document.getElementById("intelligence").value;
 	var charisma = document.getElementById("charisma").value;
 	var playerClass = document.getElementById("class").value;
-	var newPlayer = new Player (name, strength, dexterity, constitution, wisdom, intelligence, charisma, playerClass);
-	playerArray.push(newPlayer);
-    newPlayer.addToTable();
+	if(playerClass != ""){
+		var newObject = new Player (name, strength, dexterity, constitution, wisdom, intelligence, charisma, playerClass);
+	} else{
+		var newObject = new Monster(name, strength, dexterity, constitution, wisdom, intelligence, charisma);
+	}
+	playerArray.push(newObject);
+    newObject.addToTable();
 }

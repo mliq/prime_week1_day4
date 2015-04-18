@@ -84,15 +84,12 @@ function addMonster(){
 	var charisma = document.getElementById("charisma").value;
 	var classRadios = document.getElementsByName('plyrClassOpt');
 	var classRadiosLength = classRadios.length;
-	console.log("Hello??????");
 	for (var b = 0; b < classRadiosLength; b++) {
 	    if (classRadios[b].checked) {
-	    	console.log(classRadios[b].value);
+	    	//console.log(classRadios[b].value);
 	        var playerClass = classRadios[b].value;
 	        break;
-	    } else {
-	    	console.log("the problem is the if loop");
-	    }
+	    } 
 	}
 	
     // Validate data: Make sure that everything (except playerClass) has a value
@@ -102,9 +99,11 @@ function addMonster(){
     else {
         if (playerClass != "") {
             var newObject = new Player(name, strength, dexterity, constitution, wisdom, intelligence, charisma, playerClass);
+            //console.log("This is a Player")
         } else {
             var newObject = new Monster(name, strength, dexterity, constitution, wisdom, intelligence, charisma);
-        }
+            //console.log("This is a Monster")
+        }	
         playerArray.push(newObject);
         newObject.addToTable();
     }

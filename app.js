@@ -44,7 +44,5 @@ function makePlayer(){
 	var playerClass = document.getElementById("class").value;
 	var newPlayer = new Player (name, strength, dexterity, constitution, wisdom, intelligence, charisma, playerClass);
 	playerArray.push(newPlayer);
-	console.log(playerArray);
 }
-
 

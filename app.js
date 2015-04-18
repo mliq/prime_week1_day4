@@ -56,6 +56,11 @@ Monster.prototype.addToTable = function() {
 			newCell.innerHTML = statsArray[i];
 		}
     }
+    // If object is a player, and therefore has a player class, add it at the end of the cells
+    if (this.playerClass) {
+        var newCell = newRow.insertCell(-1);
+        newCell.innerHTML = this.playerClass;
+    }
 };
 
 // Override the Monster's attack() function

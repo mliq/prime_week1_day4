@@ -1,6 +1,3 @@
-var Monster = {name, strength, dexterity, constitution, wisdom, intelligence, charisma};
-var Player = {name, strength, dexterity, constitution, wisdom, intelligence, charisma, playerClass};
-
 // Monster Constructor
 function Monster(name, strength, dexterity, constitution, wisdom, intelligence, charisma) {
 	this.name = name;
